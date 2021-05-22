@@ -53,7 +53,7 @@ const ThoughtSchema = new Schema({
         id: false
     });
 
-const Thought = model('Thought', UserSchema);
+const Thought = model('Thought', ThoughtSchema);
 
 // get total count of reactions on retrieval
 ThoughtSchema.virtual('reactionCount').get(function () {

@@ -2,7 +2,7 @@ const { User, Thought } = require('../models');
 
 const userController = {
     // get all users
-    getAllUser(re, res) {
+    getAllUsers(req, res) {
         User.find({})
             .then(UserData => res.json(UserData))
             .catch(err => {
@@ -30,7 +30,7 @@ const userController = {
 
     // create user
     createUser({ body }, res) {
-        User.create({})
+        User.create(body)
             .then(UserData => res.json(UserData))
             .catch(err => {
                 console.log(err);
