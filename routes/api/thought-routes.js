@@ -28,7 +28,7 @@ router
     .post(addThought);
 // DELETE, thought associate with user /api/thoughts/:userId/:thoughtId
 router
-    .route('/:thoughtId/reactions')
+    .route('/:userId/:thoughtId')
     .delete(removeThought);
 
 // PUT Create add reaction /api/thoughts/<thoughtId>/reactions

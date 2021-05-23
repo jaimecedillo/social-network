@@ -74,7 +74,7 @@ const thoughtController = {
     },
 
     removeThought({ params }, res) {
-        Thought.findOneAndDelete({ _id: params.id })
+        Thought.findOneAndDelete({ _id: params.thoughtId })
             .then(ThoughtData => {
                 // If no Thought is found, send 404
                 if (!ThoughtData) {
