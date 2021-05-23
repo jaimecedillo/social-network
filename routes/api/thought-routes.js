@@ -11,7 +11,7 @@ const {
     removeReaction
 } = require('../../controllers/thought-controller');
 
-// Set up GET all and POST at /api/thoughts
+// Set up GET all thoughts at /api/thoughts
 router
     .route('/')
     .get(getAllThoughts);
@@ -22,7 +22,7 @@ router
     .get(getThoughtById)
     .put(updateThought);
 
-//PUT,create new thought and associate with user /api/thoughts/:userId
+//POST,create new thought and associate with user /api/thoughts/:userId
 router
     .route('/:userId')
     .post(addThought);
